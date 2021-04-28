@@ -411,6 +411,10 @@ ga('send', 'pageview');
 							eldata = {
 								href : $itemEl.attr( 'href' ),
 								largesrc : $itemEl.data( 'largesrc' ),
+
+eldata = {
+								hrefp: $itemEl.attr( 'href' ),
+								largesrc : $itemEl.data( 'largesrc' ),
 								title : $itemEl.data( 'title' ),
 								description : $itemEl.data( 'description' ),
 								buttontext : $itemEl.data( 'buttontext' )
@@ -427,6 +431,17 @@ ga('send', 'pageview');
 						}
 						else {
 							this.$href.hide();
+						}
+
+	if(eldata.buttontext) this.$hrefp.text(eldata.buttontext);
+						else this.$hrefp.text("Baixar arquivo")
+
+						if (eldata.hrefp) {
+							this.$hrefp.attr( 'href', eldata.hrefp );
+							this.$hrefp.show();
+						}
+						else {
+							this.$hrefp.hide();
 						}
 
 						var self = this;
