@@ -430,6 +430,17 @@ ga('send', 'pageview');
 							this.$href.hide();
 						}
 
+	if(eldata.buttontext) this.$hrefp.text(eldata.buttontext);
+						else this.$hrefp.text("Baixar arquivo")
+
+						if (eldata.hrefp) {
+							this.$hrefp.attr( 'href', eldata.href );
+							this.$hrefp.show();
+						}
+						else {
+							this.$hrefp.hide();
+						}
+
 						var self = this;
 						
 						if( typeof self.$largeImg != 'undefined' ) {
