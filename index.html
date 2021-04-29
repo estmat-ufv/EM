@@ -423,18 +423,17 @@ ga('send', 'pageview');
 						if(eldata.buttontext) this.$href.text(eldata.buttontext);
 						else this.$href.text("Visualizar Arquivo")
 						
-							if(eldata.buttontextp) this.$hrefp.text(eldata.buttontextp);
-						else this.$hrefp.text("Baixar Arquivo")
-
-
-						if (eldata.href) {
+												if (eldata.href) {
 							this.$href.attr( 'href', eldata.href );
 							this.$href.show();
 						}
 						else {
 							this.$href.hide();
-												}
+												};
 						
+							if(eldata.buttontextp) this.$hrefp.text(eldata.buttontextp);
+						else this.$hrefp.text("Baixar Arquivo")
+
 												if (eldata.hrefp) {
 							this.$hrefp.attr( 'hrefp', eldata.hrefp );
 							this.$hrefp.show();
