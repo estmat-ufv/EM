@@ -78,7 +78,7 @@ ga('send', 'pageview');
 					</li>
 					
 					<li>
-						<a hrefp="https://raw.githack.com/estmat-ufv/EM/master/Arquivos/7leilao.docx" href="https://raw.githack.com/estmat-ufv/EM/master/Arquivos/EM13MAT316.pdf" data-largesrc="images/full/7.png" data-title="Leilão do Menor Lance" data-description="(EM13MAT316) Cada grupo deve fazer um palpite sobre o valor da média e mediana, com uma casa decimal, para cada diagrama de pontos apresentado pelo professor. O professor informa o valor real e os alunos calculam o valor do lance, que é dado pela diferença entre o palpite e o valor real. Será vencedor o grupo que realizar o menor lance. Os alunos respondem a questões sobre medidas de tendência central e dispersão. Também é utilizada planilha eletrônica para trabalhar os dados." data-buttontext="">
+						<a hrefp="https://raw.githack.com/estmat-ufv/EM/master/Arquivos/7leilao.docx" href="https://raw.githack.com/estmat-ufv/EM/master/Arquivos/EM13MAT316.pdf" data-largesrc="images/full/7.png" data-title="Leilão do Menor Lance" data-description="(EM13MAT316) Cada grupo deve fazer um palpite sobre o valor da média e mediana, com uma casa decimal, para cada diagrama de pontos apresentado pelo professor. O professor informa o valor real e os alunos calculam o valor do lance, que é dado pela diferença entre o palpite e o valor real. Será vencedor o grupo que realizar o menor lance. Os alunos respondem a questões sobre medidas de tendência central e dispersão. Também é utilizada planilha eletrônica para trabalhar os dados." data-buttontext="" data-buttontextp="">
 							<img src="images/thumbs/7.png" alt="Hugrid Theme"/>
 						</a>
 					</li>
@@ -415,6 +415,7 @@ ga('send', 'pageview');
 								title : $itemEl.data( 'title' ),
 								description : $itemEl.data( 'description' ),
 								buttontext : $itemEl.data( 'buttontext' )
+								buttontextp : $itemEl.data( 'buttontextp' )
 							};
 
 						this.$title.html( eldata.title );
@@ -422,7 +423,7 @@ ga('send', 'pageview');
 						if(eldata.buttontext) this.$href.text(eldata.buttontext);
 						else this.$href.text("Visualizar Arquivo")
 						
-							if(eldata.buttontext) this.$hrefp.text(eldata.buttontext);
+							if(eldata.buttontextp) this.$hrefp.text(eldata.buttontextp);
 						else this.$hrefp.text("Baixar Arquivo")
 
 
@@ -435,8 +436,8 @@ ga('send', 'pageview');
 												}
 						
 												if (eldata.hrefp) {
-							this.$href.attr( 'hrefp', eldata.hrefp );
-							this.$href.show();
+							this.$hrefp.attr( 'hrefp', eldata.hrefp );
+							this.$hrefp.show();
 						}
 						else {
 							this.$hrefp.hide();
